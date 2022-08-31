@@ -1,6 +1,6 @@
 {
   "name": "api-leva",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "author": "",
   "private": true,
@@ -22,11 +22,14 @@
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/mapped-types": "*",
+    "@nestjs/mongoose": "^9.2.0",
     "@nestjs/platform-express": "^9.0.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
+    "mongoose": "^6.5.4",
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
