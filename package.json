@@ -1,10 +1,6 @@
 {
   "name": "api-leva",
-<<<<<<< HEAD
-  "version": "0.0.6",
-=======
-  "version": "0.0.3",
->>>>>>> f42f3be35c8d2d7b617eaa4740242949ef649cf5
+  "version": "0.0.8",
   "description": "",
   "author": "",
   "private": true,
@@ -22,11 +18,11 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "heroku-postbuild": "NODE_ENV=dev npm install --omit --no-shrinkwrap && npm run build"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
-<<<<<<< HEAD
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/mapped-types": "*",
@@ -35,13 +31,6 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "mongoose": "^6.5.4",
-=======
-    "@nestjs/core": "^9.0.0",
-    "@nestjs/mapped-types": "*",
-    "@nestjs/platform-express": "^9.0.0",
-    "class-transformer": "^0.5.1",
-    "class-validator": "^0.13.2",
->>>>>>> f42f3be35c8d2d7b617eaa4740242949ef649cf5
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
