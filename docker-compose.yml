@@ -1,0 +1,30 @@
+version: "3.5"
+
+services:
+
+  app:
+    build: .
+    container_name: leva-api
+    ports:
+    - "3030:3030"
+    volumes:
+      - .:/home/node/app
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: "db"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "password"
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - my-db:/var/lib/mysql
+
+volumes:
+  my-db:

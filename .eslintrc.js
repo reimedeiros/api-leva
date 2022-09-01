@@ -2,7 +2,11 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: 'tsconfig.json',
+<<<<<<< HEAD
     tsconfigRootDir : __dirname, 
+=======
+    tsconfigRootDir : __dirname,
+>>>>>>> f42f3be35c8d2d7b617eaa4740242949ef649cf5
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
@@ -21,5 +25,9 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+<<<<<<< HEAD
+=======
+    '@typescript-eslint/ban-types': 'off',
+>>>>>>> f42f3be35c8d2d7b617eaa4740242949ef649cf5
   },
 };

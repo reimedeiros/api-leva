@@ -1,4 +1,12 @@
 {
   "singleQuote": true,
+<<<<<<< HEAD
   "trailingComma": "all"
 }
+=======
+  "trailingComma": "all",
+  "semi": true,
+  "printWidth": 80,
+  "arrowParens": "avoid"
+}
+>>>>>>> f42f3be35c8d2d7b617eaa4740242949ef649cf5
