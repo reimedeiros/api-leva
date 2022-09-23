@@ -5,4 +5,4 @@ import { databaseProviders } from '../../ormconfig';
   providers: [...databaseProviders],
   exports: [...databaseProviders],
 })
-export class DatabaseModule {}
+export class DatabaseModuleTest {}

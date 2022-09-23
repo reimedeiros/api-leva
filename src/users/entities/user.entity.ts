@@ -19,6 +19,12 @@ export class UserEntity {
   @Column({ nullable: false })
   email: string;
 
+  @Column({ nullable: false })
+  password: string;
+
+  @Column({ nullable: false, default: false })
+  admin: boolean;
+
   @CreateDateColumn({ type: 'timestamp' })
   created_at: Date;
 
