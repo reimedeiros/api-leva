@@ -47,6 +47,10 @@ export class UsersService {
 
   }
 
+  async changePassword(id: string, updateUserDto: UpdateUserDto) {
+
+  }
+
   async update(id: string, updateUserDto: UpdateUserDto) {
     const user = await this.repository.update(id, updateUserDto);
 

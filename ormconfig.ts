@@ -6,11 +6,11 @@ export const databaseProviders = [
     useFactory: async () => {
       const dataSource = new DataSource({
         type: 'mysql',
-        host: 'localhost',
+        host: 'us-cdbr-east-06.cleardb.net' || 'localhost',
         port: 3306,
-        username: 'user',
-        password: 'password',
-        database: 'db',
+        username: 'b645faf756b60f' || 'user',
+        password: '400d3899' || 'password',
+        database: 'heroku_2d13f1f952fa039' || 'db',
         entities: ['dist/**/*.entity.js'],
         migrations: ['dist/migrations/*.js'],
         synchronize: true,
