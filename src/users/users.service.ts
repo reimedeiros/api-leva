@@ -37,8 +37,8 @@ export class UsersService {
     return this.repository.find();
   }
 
-  async findOne(id: string): Promise<UserEntity> {
-    const user = await this.repository.findOne({where: {id}});
+  async findOne(email: string): Promise<UserEntity> {
+    const user = await this.repository.findOne({where: {email}});
 
     if (!user) {
       throw new NotFoundException();
@@ -47,6 +47,7 @@ export class UsersService {
 
   }
 
+  // Falta desenvolver
   async changePassword(id: string, updateUserDto: UpdateUserDto) {
 
   }

@@ -7,8 +7,6 @@ import * as request from 'supertest';
 import { CreateUserDto } from '../dto/create-user.dto';
 import { INestApplication } from '@nestjs/common';
 
-let app: INestApplication;
-
 const user: CreateUserDto = {
   name: "name",
   email: "test@test.com",
@@ -17,6 +15,7 @@ const user: CreateUserDto = {
 };
 
 describe('UsersController', () => {
+  let app: INestApplication;
   let controller: UsersController;
 
   beforeAll(async () => {
@@ -27,25 +26,36 @@ describe('UsersController', () => {
     }).compile();
 
     controller = module.get<UsersController>(UsersController);
+
+    app = module.createNestApplication();
+    await app.init();
   });
 
   it('should be defined', () => {
     expect(controller).toBeDefined();
   });
 
-  it("(POST) should create users", async () => {
-    await request(app.getHttpServer())
-      .post("/users")
-      .send(user)
+  it("(GET) show all users", () => {
+    return request(app.getHttpServer())
+      .get("/users")
       .then((response) => {
-        console.log(response);
-        // expect(response.statusCode).toBe(201);
-        // expect(response.body.name).toBe("name");
-      });
+        console.log("GET = ", response);
+      })
   });
-  
-  afterAll(done => {
-    done()
-  })
+
+  // it("(POST) should create users", async () => {
+  //   await request(app.getHttpServer())
+  //     .post("/users")
+  //     .send({
+  //       "name": "Ray B. Medeiros",
+  //       "email": "raylan@gmail.com",
+  //       "password": "123",
+  //       "admin": true
+  //   })
+  //     .then((response) => {
+  //       expect(response.statusCode).toBe(201);
+  //       expect(response.body.name).toBe("name");
+  //     });
+  // });
 
 });
